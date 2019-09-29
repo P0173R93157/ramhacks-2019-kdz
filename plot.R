@@ -1,0 +1,6 @@
+library("rgl")
+library("xlsx")
+library("plot3D")
+source("hist3D_fancy")
+data <- read.xlsx("LongLatPrice.xlsx", sheetIndex = 1)
+hist3D_fancy(data$latitude, data$longitude, data$price, theta=30, phi=60)
